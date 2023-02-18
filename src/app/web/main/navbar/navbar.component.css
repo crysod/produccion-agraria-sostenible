@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+}
+
+.btn{
+    color: aliceblue;
+    border: none;
+    display: inline-block;
+    border-radius: 8px;
+    z-index: 2;
+}
+
+.bini{
+    background-color: #30af70;
+    margin-left: 20px;
+}
+
+.bini > a{
+    color: white;
+    text-decoration: none;
+}
+
+.btn:focus{
+    outline: none;
+}
+.btn:hover{
+  transform: translate(0, -2px);
+  box-sizing: border-box;
+}
+
+.btn{
+  color: aliceblue;
+  border: none;
+  display: inline-block;
+  border-radius: 8px;
+  z-index: 2;
+}
+
+.bini{
+  background-color: #30af70;
+  margin-left: 20px;
+}
+
+.bini > a{
+  color: white;
+  text-decoration: none;
+}
+
+.btn:focus{
+  outline: none;
+}
+.btn:hover{
+  transform: translate(0, -2px);
+}

@@ -1,0 +1,30 @@
+.Ft{
+  font-family: 'Poppins', sans-serif;
+}
+.col-4 > figure > img{
+  height: 250px;
+}
+
+@media (max-width: 1200px) {
+  .col-4 > figure > img{
+    height: 150px;
+  }
+}
+
+@media (max-width: 800px) {
+  .col-4 > figure > img{
+    height: 100px;
+  }
+}
+
+#products{
+  margin: auto;
+}
+
+#products img{
+  border-radius: 12px;
+}
+
+.img > img{
+  border-radius: 12px;
+}

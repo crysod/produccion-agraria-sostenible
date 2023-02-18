@@ -1,0 +1,10 @@
+.equipo{
+    text-decoration: none;
+}
+
+footer{
+  margin-top: 10%;
+  z-index: 1;
+  position: relative;
+  bottom: 0;
+}

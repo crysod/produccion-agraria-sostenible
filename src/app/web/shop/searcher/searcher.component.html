@@ -1,0 +1,13 @@
+<div class="mb-3">
+  <form [formGroup]="formSearch">
+    <input type="text" class="form-control" formControlName="product" placeholder="Buscar por nombre de producto"
+      aria-label="Recipient's username" aria-describedby="basic-addon2" (keydown.enter)="searchProductOnWeb()">
+
+      <div *ngIf="formSearch.get('product')?.errors && formSearch.get('product')?.dirty"   class="errors">
+        <p *ngIf="formSearch.get('product')?.hasError('required')">Es necesario introducir un valor</p>
+        <p *ngIf="formSearch.get('product')?.hasError('minLenght')">Debes escribir más de 2 caracteres</p>
+        <p *ngIf="formSearch.get('product')?.hasError('maxLenght')">No debes sobrepasar los 20 caracteres</p>
+        <p *ngIf="formSearch.get('product')?.hasError('pattern')">Solo se aceptan letras  como criterio de busqueda</p>
+      </div>
+  </form>
+</div>

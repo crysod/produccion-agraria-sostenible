@@ -1,0 +1,36 @@
+<div class="card mb-5" style="width: 18rem;">
+
+  <div class="card-body">
+    <form [formGroup]="editarCantidad">
+
+
+      <h5 class="card-title">{{cart.name}}</h5>
+      <p *ngIf="!cantidad">{{cart.precio | currency}} - Cantidad: {{cart.cantidad}}</p>
+      <p *ngIf="cantidad">{{cart.precio | currency}} - Cantidad:
+
+        <input type="number"
+               formControlName="cantidad"
+               value="{{cart.cantidad}}"
+
+               >
+
+
+      </p>
+        <div *ngIf="editarCantidad.get('cantidad')?.errors && editarCantidad.get('cantidad')?.dirty" class="errors">
+          <p *ngIf="editarCantidad.get('cantidad')?.hasError('required')">Sol se escrien numeros</p>
+          <p *ngIf="editarCantidad.get('cantidad')?.hasError('pattern')">Solo numeros</p>
+        </div>
+
+        <p *ngIf="alert">{{alert}}</p>
+
+      <p>Total: {{cart.precio * cart.cantidad | currency}}</p>
+
+
+
+      <button class="btn btn-danger" (click)="deleteProductFromCart(cart._id)" >Borrar</button>
+      <button *ngIf="!cantidad" class="btn btn-secondary" (click)="editCartMode()" >Editar</button>
+      <button *ngIf="cantidad" class="btn btn-light" (click)="editCart(cart)" [disabled]="editarCantidad.invalid">Guardar</button>
+    </form>
+  </div>
+</div>
+

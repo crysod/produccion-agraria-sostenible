@@ -1,0 +1,63 @@
+<section>
+  <div class="container mt-5">
+    <div class="card mb-5">
+      <div class="card-body p-3">
+        <div class="row d-flex d-flex justify-content-center flex-wrap my-3">
+          <div class=" cont col-5">
+            <picture>
+              <img src="https://mejorconsalud.as.com/wp-content/uploads/2014/08/aportes-miel.jpg" alt="Imagne del producto">
+            </picture>
+          </div>
+          <div class="col-7">
+            <h5 class="card-title">Miel Organica</h5>
+            <p>$0 - Can: 150</p>
+            <button class="text-white btn border-0">-</button><input class="border-0 mx-2" type="text" placeholder="Cantidad" disabled><button class="text-white btn border-0">+</button>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of th Some quick example text to build on the card title and make up the bulk of th Some quick example text to build on the card title and make up the bulk of th.</p>
+            <div class="d-grid">
+              <!-- <button class="comprar mb-2" (click)="buy(oneProduct)" [disabled]="cantidad.invalid">Comprar</button>
+              <button class="btn text-white mb-2" (click)="addToCart(oneProduct)" [disabled]="cantidad.invalid" *ngIf="!validate">Añadir al carrito</button> -->
+              <button class="comprar my-2" (click)="buy(oneProduct)" [disabled]="cantidad.invalid"><a class="text-white text-decoration-none" href="#">Comprar</a></button>
+              <button class="btn text-white my-2"(click)="addToCart(oneProduct)" [disabled]="cantidad.invalid" *ngIf="!validate">Añadir al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <h2 class="h2">Who you are? this is my reference</h2>
+          <p class="text-justify text-secondary">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae,
+            eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros.
+            Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.
+            Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae,
+            eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros.
+            Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.
+            Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae,
+            eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros.
+            Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.
+  
+          <form [formGroup]="cantidad">
+            <h5 class="card-title">{{oneProduct?.name}}</h5>
+            <p>{{oneProduct?.precio | currency}} - Stock: {{oneProduct?.existencias}}</p>
+            <p class="card-text">{{oneProduct?.description}}</p>
+            <p class="d-inline-block">Cantidad:</p>
+            <input class="border-0" type="number"  formControlName="cantidad" placeholder="0" >
+            <!-- <div class="d-grid">
+              <button class="comprar mb-2" (click)="buy(oneProduct)" [disabled]="cantidad.invalid">Comprar</button>
+              <button class="btn text-white mb-2" (click)="addToCart(oneProduct)" [disabled]="cantidad.invalid" *ngIf="!validate">Añadir al carrito</button>
+              <button class=" mb-2" (click)="redirectToCart()"      [disabled]="cantidad.invalid" *ngIf="validate">Modificar</button>
+            </div> -->
+          </form>
+          <div *ngIf="cantidad.get('cantidad')?.errors && cantidad.get('cantidad')?.dirty" class="errors">
+            <p *ngIf="cantidad.get('cantidad')?.hasError('required')">Es necesario introducir un valor</p>
+            <p *ngIf="cantidad.get('cantidad')?.hasError('pattern')">Superaste el stock</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <h2 class="h2">{{oneProduct?.tituloResena}}</h2>
+        <p class="text-justify text-secondary">{{oneProduct?.resena}}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>
+

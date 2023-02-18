@@ -1,0 +1,65 @@
+<div class="container my-5">
+  <div class="card">
+
+    <div class="card-header">
+      <h3 class="my-3">{{oneExperience?.tituloExperiencia | uppercase}}</h3>
+    </div>
+
+    <div class="card-body">
+      <div class="row">
+        <div class="col-8">
+          <h3 class="my-3">Visita Sierra Nevada de Santa marta</h3>
+          <p class="mt-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus
+            voluptatum exercitationem commodi provident. Odio rerum nostrum, quasi, voluptatem numquam quibusdam
+            explicabo illum maiores quae recusandae, consequatur tenetur possimus id perferendis! <br>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus
+            voluptatum exercitationem commodi provident. Odio rerum nostrum, quasi, voluptatem numquam quibusdam
+            explicabo illum maiores quae recusandae, consequatur tenetur possimus id perferendis!
+          </p>
+        </div>
+        <div class="col-4">
+          <img src="https://personal-eva.s3.us-east-2.amazonaws.com/img/Fondos/1E1A6097.jpg" class="img-fluid d-flex justify-content-center rounded p-3" alt="experiencia">
+          <!-- <p class="mt-3">{{oneExperience?.experiencia | titlecase}}</p> -->
+          <figcaption class="d-flex">
+            <p class="text-center text-wrap my-0">Autor: Junior Mindiola Maestre</p>  
+          </figcaption>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="card-footer">
+      <p class="fw-bold">Restricciones:</p>
+        <ul>
+          <li class="nav-item ms-5">No menores de 18 años</li>
+          <li class="ms-5">Cupo: 150.000 personas</li>
+        </ul>
+        <div class="d-grid">
+            <button href="#" class="btn btn-lg mb-4" type="submit" value="Submit">Agendar</button>
+        </div>
+    </div>
+
+  </div>
+
+  <h4 class="fw-bold my-4">Información de la experiencia: </h4>
+  <table class="table table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Restricción</th>
+        <th scope="col">Cupos</th>
+        <th scope="col">Valor</th>
+        <th scope="col">Apertura</th>
+        <th scope="col">Finaliación</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">{{oneExperience?.restricciones}}</th>
+        <td>{{oneExperience?.numeroDeCupos}} personas</td>
+        <td>{{oneExperience?.valor | currency}}</td>
+        <td>{{oneExperience?.apertura}}</td>
+        <td>{{oneExperience?.finalizacion}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

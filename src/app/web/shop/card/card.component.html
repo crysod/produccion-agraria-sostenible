@@ -1,0 +1,59 @@
+<div class="card mb-5" style="width: 18rem;">
+  <!-- Enlace a vista del producto -->
+  <a href="#" routerLink="/product/jdjdjdjdj">
+    <img class="card-img-top border-bottom" src="https://personal-eva.s3.us-east-2.amazonaws.com/img/FotosProductos/_E1A6759-removebg-preview.png" alt="Card image cap">
+  </a>
+  <!-- Cuerpo del producto -->
+
+  <form [formGroup]="cantidad">
+    <div class="mb-2">
+      <p class="card-text text-secondary">{{product.precio | currency}} - Stock: {{product.existencias}}</p>
+      <p class="d-inline-block mx-2">Cantiidad:</p>
+      <input class="border-0" type="number" formControlName="cantidad" placeholder="0" >
+    </div>
+
+
+    <div class="d-flex justify-content-center flex-wrap flex-wrap" id="img-container">
+      <button class="btn btn-light cart mb-2"  (click)="addToCart(product)" [disabled]="cantidad.invalid" *ngIf="!validate">
+        <img src="../../../../assets/icon/carro-de-la-compra.png" alt="">
+        Añadir
+      </button>
+      <button class="btn btn-light cart mb-2"  (click)="redirectToCart()"  [disabled]="cantidad.invalid" *ngIf="validate">Modificar</button>
+      <p class="card-text text-secondary p-2">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+
+
+    <div class="d-grid">
+      <button class="btn text-white m-2" (click)="addToCart(product)">Añadir al carrito</button>
+      <button class="comprar text-white m-2" routerLink="/product/{{product._id}}">
+      <img src="../../../../assets/icon/ver.png" alt="Icono">
+      Ver más</button>
+    </div>
+
+    <!-- <div class="card-body">
+      <a href="" routerLink="/product/asdasadasd"><h5 class="card-title">{{product.name | uppercase}}</h5></a>
+      <div class="mb-2">
+        <p>{{product.precio | currency}} - Can: {{product.existencias}}</p>
+        <input type="text" placeholder="{{product.existencias}}">
+        <p class="card-text text-secondary">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+      Botones de compra y añadir
+      <div class="d-grid">
+        <button class="comprar"><a href="#">Comprar</a></button>
+        <button class="btn text-white mt-2" (click)="addToCart(product)">Añadir al carrito</button>
+      </div> -->
+
+  </form>
+
+  <!-- <img class="card-img-top border-bottom" src="https://personal-eva.s3.us-east-2.amazonaws.com/img/FotosProductos/_E1A6759-removebg-preview.png" alt="Card image cap"> -->
+
+  <div *ngIf="cantidad.get('cantidad')?.errors && cantidad.get('cantidad')?.dirty" class="errors">
+    <p *ngIf="cantidad.get('cantidad')?.hasError('required')">Es necesario introducir un valor</p>
+    <p *ngIf="cantidad.get('cantidad')?.hasError('pattern')">Superaste el stock</p>
+  </div>
+
+  <div class="errors">
+  <p *ngIf="alert" >{{alert}}</p>
+  </div>
+
+</div>

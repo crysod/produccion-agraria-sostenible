@@ -1,0 +1,28 @@
+.rounded{
+    width: 200px;
+}
+
+.btn{
+    color: #fff;
+    background-color: #127cd3;
+    width: 82px;
+    
+}
+
+.btn:focus{
+    outline: none;
+}
+
+.btn:hover{
+    background-color: #1070bf;   
+    transform: translate(0, -2px);
+    /* width: 20px; */
+}
+
+.btn:focus{
+  outline: none;
+}
+
+/* .col-4{
+  background-color: antiquewhite;
+} */

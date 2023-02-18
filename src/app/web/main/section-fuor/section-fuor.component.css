@@ -1,0 +1,25 @@
+.tv{
+    margin: auto 0;
+}
+
+#col-7 h2{
+    font-family: 'Poppins', sans-serif;
+    color: #30af70;
+}
+
+#entrevista{
+    margin: auto;
+}
+
+@media (max-width: 1400px){
+    .col-7 > iframe{
+        width: 750px;
+    }
+}
+
+@media (max-width: 800px){
+    .col-7 > iframe{
+        width: 350px;
+        height: 150px;;
+    }
+}

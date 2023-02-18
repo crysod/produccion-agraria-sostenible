@@ -1,0 +1,24 @@
+.tv{
+  margin: auto 0;
+}
+
+#col-7 h2{
+  font-family: 'Poppins', sans-serif;
+  color: #30af70;
+}
+
+#entrevista{
+  margin: auto;
+}
+
+.autor{
+  font-size: 14px;;
+  text-align: center;
+  color: silver;
+  font-style: italic;
+}
+
+.video-responsive{
+  overflow: hidden;
+  /* width: 100%; */
+}

@@ -1,0 +1,59 @@
+h5{
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-control{
+    width: 300px;
+}
+
+.btn{
+    background-color: #1070bf;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+.btn:hover{
+  transform: translate(0, -2px);
+  font-family: 'Poppins', sans-serif;
+}
+
+.form-control{
+  width: 300px;
+}
+
+.btn{
+  background-color: #1070bf;
+}
+
+.btn:focus{
+  outline: none;
+}
+
+.btn:hover{
+  transform: translate(0, -2px);
+}
+
+@media (max-width: 1400px) {
+  .buscar {
+    width: 190px;
+  }
+}
+@media (max-width: 1200px) {
+  .buscar {
+    width: 120px;
+  }
+}
+@media (max-width: 1000px) {
+  .buscar {
+    width: 50px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .d-flex {
+    justify-content: center;
+    align-content: center;
+  }
+}

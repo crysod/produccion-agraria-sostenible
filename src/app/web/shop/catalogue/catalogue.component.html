@@ -1,0 +1,62 @@
+<!-- <h5 class="display-4 mb-3">Catalogías</h5> -->
+<h5 class="display-4 mb-3">Catalogos</h5>
+<div class="d-flex justify-content-start mb-3 p-1">
+  <!-- Esta por te del codigo no es mia, no se para que sirve, pero la dejo ahí "Imagino qu es para traer las distintas categorias que esten cargadas en la DB." -->
+  <div *ngFor="let catalogue of catalogue">
+    <button type="button" class="btn btn-light" data-toggle="tooltip" data-placement="top"
+      title="Descripción: {{catalogue.description}}">{{catalogue.name}}<span class="badge badge-dark">4</span>
+    </button>
+  </div>
+  <div class="row">
+    <!-- Menu de las categorias -->
+  <div class="col-8 justify-content-start">
+    <button type="button" class="btn text-white m-2">Miel de abejas <span class="badge badge-dark">4</span></button>
+    <button type="button" class="btn text-white m-2">Cafe<span class="badge badge-dark">4</span></button>
+    <button type="button" class="btn text-white m-2">Cafe Organico<span class="badge badge-dark">4</span></button>
+    <button type="button" class="btn text-white m-2">Platano<span class="badge badge-dark">4</span></button>
+  </div>  
+  <!-- Formulario para el filtro de busquedad de productos -->
+  <div class="col-4">
+    <form class="d-flex ms-5" role="search">
+      <input class="form-control ms-5 buscar" type="search" placeholder="Buscar Producto" aria-label="Search">
+      <button class="btn tb text-white ms-2" type="submit">Buscar</button>
+    </form>
+    <!-- <button type="button" class="btn text-white mx-2" data-toggle="tooltip" data-placement="top">
+      title="Descripción: {{catalogue.description}}"
+      (click)="getFromServiceProductFromCatalogue(catalogue._id)">{{catalogue.name}}
+    </button> -->
+  </div>
+  </div>
+</div>
+<!-- Esto no es mio, imagino que es para trer cada uno de las card informaticas de cada prpducto, de igual manera la dejo ahí -->
+<div class="d-flex d-flex justify-content-center flex-wrap flex-wrap" id="img-container">
+  <div *ngFor="let product of products">
+    <app-card [product]="product"></app-card>
+    <hr>
+    <app-searcher (product)="searcheResult($event)" (productLenght)="getConsultLength($event)"></app-searcher>
+
+    <div>
+      <div>
+        <h5>Productos</h5>
+      </div>
+
+      <div *ngIf="parametro">
+        <p>Coincidendias para:  {{parametro}}</p>
+      </div>
+
+      <div class="alert alert-danger" role="alert" *ngIf="parametroBusqueda === 0">
+        No se encontrarón productos relacionados con esta busqueda
+      </div>
+
+      <div class="alert alert-danger" role="alert" *ngIf="productoCatalogo === 0">
+        Por el momento este catalogo no tiene productos asociados
+      </div>
+
+      <div class="d-flex justify-content-around flex-wrap flex-wrap" id="img-container">
+        <div *ngFor="let product of products">
+          <app-card [product]="product"></app-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

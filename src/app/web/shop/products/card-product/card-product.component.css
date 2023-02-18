@@ -1,0 +1,60 @@
+.container {
+    position: relative;
+    top:30px;
+    
+}
+
+.card{
+  top: 80px;
+  margin: auto;
+}
+
+img{
+  width: 500px;
+  border-radius: 8px;
+  transition: 0.5;
+  transition: transform 400ms;
+  object-fit: cover;
+}
+.cont{
+  overflow: hidden;
+}
+
+img:hover{
+  transform: scale(1.2);
+  border-radius: 8px;
+}
+
+.comprar{
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2c9962;
+}
+
+
+.comprar:hover{
+  border-radius: 8px;
+  transform: translate(0, -2px);
+  background-color: #2c9963ce;
+}
+
+.btn{
+  background-color: #127cd3;
+  
+}
+
+.btn:focus{
+  outline: none;
+}
+
+.btn:hover{
+  background-color: #1070bf;   
+  transform: translate(0, -2px);
+}
+
+.errors > p {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}

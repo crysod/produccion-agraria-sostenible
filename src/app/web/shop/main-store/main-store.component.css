@@ -1,0 +1,15 @@
+.card {
+  background-color: #f8f8f8;
+}
+
+#img-container {
+  width: 100%;
+}
+
+.btn{
+  background-color: #34bd78;
+}
+
+.btn:hover{
+  background-color: #30af70;
+}

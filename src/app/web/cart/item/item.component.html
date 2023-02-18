@@ -1,0 +1,32 @@
+<div class="container">
+
+  <div *ngIf="result">
+    <div class="card mt-3 mb-5" >
+      <div class="card-body">
+
+        <h5>Carrito de compras</h5>
+        <div class="d-flex justify-content-between flex-wrap" id="img-container" >
+          <div *ngFor="let cart of cart">
+          <app-product [cart]="cart"></app-product>
+          </div>
+        </div>
+         <button class="btn btn-primary" (click)="buy()">Orde de compra por:{{orden.total | currency}}</button>
+      </div>
+    </div>
+    <button class="btn btn-danger" (click)="deleteCart()">Vaciar Carrito</button>
+  </div>
+
+   <div *ngIf="!result">
+    <div class="card mt-3 mb-5">
+      <div class="card-body">
+
+        <h5>Aún no te animas!</h5>
+        <div class="alert alert-danger" role="alert">
+          Aún no tienes productos en tu carrito de compras!
+      </div>
+      </div>
+    </div>
+   </div>
+</div>
+
+<app-footer></app-footer>
